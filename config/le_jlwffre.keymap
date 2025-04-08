@@ -9,8 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Home row mods macro
-#define HRML(k1,k2,k3) &ht LGUI  k1 &ht LALT k2  &ht LCTRL k3
-#define HRMR(k1,k2,k3) &ht RCTRL k1 &ht LALT k2  &ht RGUI  k3
+#define HRML(k1,k2,k3,k4) &ht LALT  k1 &ht LGUI  k2  &ht LSHFT k3 &ht LCTRL k4
+#define HRMR(k1,k2,k3,k4) &ht RCTRL k1 &ht LSHFT k2  &ht RGUI  k3 &ht RALT  k4
 
 / {
     behaviors {
@@ -99,7 +99,7 @@
             &kp Q      &kp W      &kp F      &kp P      &kp B                             &kp J      &kp L      &kp U      &kp Y      &as SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  R       │  S       │  T       │  G       │                      │  M       │  N       │  E       │  I       │ O        │
-            HRML(A,     R,         S)         &kp T     &kp G                             &kp M      &kp N      HRMR(E,     I,        O)
+            HRML(A,     R,         S,         T)        &kp G                             &kp M      HRMR(N,     E,         I,        O)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                      ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  D       │  V       │                      │  K       │  H       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp D      &kp V                             &kp K      &kp H      &as COMMA  &as DOT    &as FSLH
